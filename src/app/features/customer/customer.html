@@ -1,1 +1,14 @@
-<p>customer works!</p>
+<ul>
+@for(customer of customers; track $index){
+    <li class="flex">
+        <!-- <img 
+        class="w-12 h-12 rounded-full object-cover object-center"  
+        src="{{customer.avatar}}" 
+        alt="{{customer.name}}" > -->
+        <!-- <img [src]='customer.avatar' `[alt]='customer.name'> -->
+        <!-- <p>{{customer.name}}</p> -->
+        <app-customer-item [customer]="customer"></app-customer-item>
+        <!-- <app-customer-item/> -->
+    </li>
+}
+</ul>

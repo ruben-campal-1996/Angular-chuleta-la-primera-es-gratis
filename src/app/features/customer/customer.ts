@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { ICustomer } from './customer.interface';
+import { CustomerItem } from '../customer-item/customer-item';
 
 @Component({
   selector: 'app-customer',
-  imports: [],
+  imports: [CustomerItem],
   templateUrl: './customer.html',
   styleUrl: './customer.css',
 })
 export class Customer {
-  customers = [
+  customers:ICustomer[] = [
     { name: 'Juan García', avatar: 'https://i.pravatar.cc/150?u=juangarcia' },
     { name: 'María López', avatar: 'https://i.pravatar.cc/150?u=marialopez' },
     { name: 'Carlos Rodríguez', avatar: 'https://i.pravatar.cc/150?u=carlosrodriguez' },
